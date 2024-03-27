@@ -1,3 +1,5 @@
+import com.diffplug.gradle.spotless.SpotlessExtension
+
 plugins {
     id("com.diffplug.spotless") version "6.25.0"
 }
@@ -7,7 +9,7 @@ repositories {
 }
 
 
-spotless {
+configure<SpotlessExtension> {
     java {
         target("src/*/java/**/*.java")
 
